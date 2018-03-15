@@ -8,4 +8,4 @@ import lombok.Data;
 public class Path {
 	private String context,js,image,css;
 }
-//
+//vv
