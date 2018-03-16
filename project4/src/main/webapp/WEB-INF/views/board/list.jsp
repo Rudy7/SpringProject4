@@ -4,8 +4,8 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Document</title>
-	<script src="${path.js}/bootstrap.js"></script>
 	<script src="${path.js}/jquery-3.3.1.min.js"></script>
+	<script src="${path.js}/bootstrap.js"></script>
 	<style>
 		#tab-board-title{
 			border: 1px solid gray;

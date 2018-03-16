@@ -4,8 +4,8 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Document</title>
-	<script src="${path.js}/bootstrap.js"></script>
 	<script src="${path.js}/jquery-3.3.1.min.js"></script>
+	<script src="${path.js}/bootstrap.js"></script>
 	<style>
 		#tab-board-title{
 			border: 1px solid gray;
@@ -66,7 +66,7 @@
 		<tr>
 			<td id="td-board-enter" class="text-center">제목</td>
 			<td colspan="5">
-				<input class="text-center" id="input-board-title" type="text" />
+				<input id="input-board-title" class="text-center" type="text" />
 			</td>
 		</tr>
 		<tr>
@@ -91,6 +91,11 @@
 	</table>
 </body>
 	<script>
-		
+		$('#btn-board-enter').on('click', function(){
+			alert("write 도착 ");
+			var title = $('#input-board-title').val();
+			var content = $('#input-board-write').val();
+			location.href="${path.context}/list/"+ title +"/"+ content;
+		});
 	</script>
 </html>

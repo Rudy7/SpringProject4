@@ -1,8 +1,10 @@
 package com.project4.web.mapper;
 
 import java.util.List;
+import org.springframework.stereotype.Component;
 import com.project4.web.domain.BoardDTO;
 
+@Component
 public interface BoardMapper {
 	public void insertBoard(BoardDTO board);
 	public void updateBoard(BoardDTO board);

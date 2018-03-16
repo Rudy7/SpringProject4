@@ -8,6 +8,7 @@ import lombok.Data;
 public class BoardDTO {
 	private String bbsSeq,
 				   title,
+				   content,
 				   writedate,
 				   viewCount,
 				   good,

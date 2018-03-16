@@ -1,8 +1,10 @@
 package com.project4.web.service;
 
 import java.util.List;
+import org.springframework.stereotype.Component;
 import com.project4.web.domain.BoardDTO;
 
+@Component
 public interface BoardService {
 	public void addBoard(BoardDTO board);
 	public void modifyBoard(BoardDTO board);

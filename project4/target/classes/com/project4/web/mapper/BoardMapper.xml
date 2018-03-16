@@ -4,8 +4,20 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.project4.web.mapperImpl.BoardMapperImpl">
 <insert id="insertBoard" parameterType="board">
+INSERT INTO 
+member(bbs_seq, title, content, writedate, view_count, good, userid)
+VALUES( , , , , , , ) 
 </insert>
-<!-- <update>
-</update> -->
-
+<update id="updateBoard" parameterType="board">
+</update>
+<delete id="deleteBoard" parameterType="board">
+</delete>
+<select id="selectAll" resultType="board">
+</select>
+<select id="selectByName" parameterType="board" resultType="board">
+</select>
+<select id="selectById" parameterType="board" resultType="board">
+</select>
+<select id="selectCount" resultType="int">
+</select>
 </mapper>
