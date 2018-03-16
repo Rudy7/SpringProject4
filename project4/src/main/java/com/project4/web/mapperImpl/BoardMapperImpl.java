@@ -14,7 +14,7 @@ public class BoardMapperImpl implements BoardMapper{
 
 	@Override
 	public void updateBoard(BoardDTO board) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub//d
 	}
 
 	@Override
