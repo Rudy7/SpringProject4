@@ -95,7 +95,7 @@
 			alert("write 도착 ");
 			var title = $('#input-board-title').val();
 			var content = $('#input-board-write').val();
-			location.href="${path.context}/list/"+ title +"/"+ content;
+			location.href="${path.context}/write/"+ title +"/"+ content;
 		});
 	</script>
 </html>

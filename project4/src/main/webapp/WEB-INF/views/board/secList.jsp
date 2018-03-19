@@ -69,7 +69,12 @@
 			<td class="text-center">좋아요</td>
 		</tr>
 		<tr>
-			<td colspan="6">게시글이 없습니다. </td>
+			<td>테스트 </td>
+			<td>테스트 </td>
+			<td>테스트 </td>
+			<td>테스트 </td>
+			<td>테스트 </td>
+			<td>테스트 </td>
 		</tr>
 	</table>
 </body>

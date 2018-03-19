@@ -55,7 +55,7 @@ public class MemberServiceImpl implements MemberService{
 
 	@Override
 	public boolean count(MemberDTO member) {
-		logger.info("멤버서비스임플 도착했습니다 아이디는 {}", member.getId());
+		logger.info("멤버서비스임플 도착했습니다 아이디는 {}", member.getUserid());
 		boolean e = false;
 		int k = mapper.selectCount(member);
 		if(k!=0) {

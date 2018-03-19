@@ -8,7 +8,7 @@
 INSERT INTO member
 	(userid, password, name, regdate)  
 VALUES
-	(#{id}, #{pass}, #{name}, sysdate)
+	(#{userid}, #{password}, #{name}, sysdate)
 </insert>
 
 <update id="updateMember" parameterType="member">
@@ -29,18 +29,18 @@ WHERE password = #{nowPass}
 </select>
 
 <select id="selectById" resultType="member" parameterType="member"> 
-SELECT userid AS id,
-	   password AS pass,
+SELECT userid,
+	   password,
 	   name,
 	   regdate
 FROM member 
-WHERE userid like #{id}
+WHERE userid like #{userid}
 </select>
 
 <select id="selectCount" resultType="int" parameterType="member">
 SELECT COUNT(*) 
 FROM member 
-WHERE userid like #{id} 
-	  AND password like #{pass}
+WHERE userid like #{userid} 
+	  AND password like #{password}
 </select>
 </mapper>

@@ -8,15 +8,16 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
+
 import com.project4.web.domain.CommonDTO;
 import com.project4.web.domain.MemberDTO;
 import com.project4.web.domain.Path;
 import com.project4.web.service.MemberService;
-
+@SessionAttributes("loginUser")
 @Controller
 public class MemberController {
 	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
-
 	@Autowired MemberDTO member;
 	@Autowired MemberService mService;
 	@Autowired CommonDTO common;
@@ -36,8 +37,8 @@ public class MemberController {
 		logger.info("멤버컨트롤러에 @@로그인에 도착함");
 		logger.info("아이디는 {}", idd);
 		logger.info("비밀번호는 {}", pass);
-		member.setId(idd);
-		member.setPass(pass);
+		member.setUserid(idd);
+		member.setPassword(pass);
 		String path = "user/login";
 		boolean x = mService.count(member);
 			if(x) {
@@ -62,10 +63,10 @@ public class MemberController {
 			@PathVariable("name")String name
 			) {
 		logger.info("멤버컨트롤러 마이페이지 도착함");
-		member.setId(id);
-		member.setPass(pass);
+		member.setUserid(id);
+		member.setPassword(pass);
 		member.setName(name);
-		logger.info("아이디는 {}", member.getId());
+		logger.info("아이디는 {}", member.getUserid());
 		logger.info("이름은 {}" , member.getName());
 		mService.addMember(member);
 		return "user/login";

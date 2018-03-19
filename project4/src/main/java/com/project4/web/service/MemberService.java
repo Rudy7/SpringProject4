@@ -2,7 +2,6 @@ package com.project4.web.service;
 
 import java.util.List;
 import org.springframework.stereotype.Component;
-
 import com.project4.web.domain.CommonDTO;
 import com.project4.web.domain.MemberDTO;
 

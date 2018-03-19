@@ -3,6 +3,7 @@ package com.project4.web.mapper;
 import java.util.List;
 import org.springframework.stereotype.Component;
 import com.project4.web.domain.BoardDTO;
+import com.project4.web.domain.MemberDTO;
 
 @Component
 public interface BoardMapper {

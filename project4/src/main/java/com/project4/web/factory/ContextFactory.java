@@ -13,6 +13,7 @@ import com.project4.web.domain.Path;
 public class ContextFactory {
 	private static final Logger logger = LoggerFactory.getLogger(ContextFactory.class);
 	@Autowired Path path;
+
 	public String path() {
 		return ((ServletRequestAttributes)
                 RequestContextHolder
@@ -25,7 +26,7 @@ public class ContextFactory {
 	public Path ptx() {
 		logger.info("contextFactory ptx() is {}", "Entered");
 		path.setContext(path());
-		path.setCss(path() +"/resources/css");
+		path.setCss(path()+"/resources/css");
 		path.setImage(path() +"/resources/img");
 		path.setJs(path() +"/resources/js");
 		return path;

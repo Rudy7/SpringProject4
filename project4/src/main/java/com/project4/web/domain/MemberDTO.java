@@ -6,5 +6,6 @@ import lombok.Data;
 @Data
 @Component
 public class MemberDTO {
-	private String id,pass,name,regdate;
+	private String userid,password,name,regdate;
+	
 }

@@ -4,9 +4,11 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.project4.web.mapperImpl.BoardMapperImpl">
 <insert id="insertBoard" parameterType="board">
-INSERT INTO 
+INSERT INTO board
+VALUES(bbsSeq.nextval, #{title}, #{content}, sysdate, '2', '2', #{userid})
+<!-- INSERT INTO 
 member(bbs_seq, title, content, writedate, view_count, good, userid)
-VALUES( , , , , , , ) 
+VALUES(#{bbsSeq}, #{title}, #{content}, sysdate,   #{view_count}, #{good}, #{id}) -->
 </insert>
 <update id="updateBoard" parameterType="board">
 </update>

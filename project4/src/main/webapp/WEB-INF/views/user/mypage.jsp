@@ -36,7 +36,7 @@
 		<tr>
 			<td>아이디
 			</td>
-			<td>${loginUser.id}
+			<td id="td-mypage-id">${loginUser.userid}
 			</td>
 		</tr>
 		<tr>
@@ -54,7 +54,7 @@
 		<tr>
 			<td>테스트-비밀번호
 			</td>
-			<td>${loginUser.pass} 
+			<td>${loginUser.password} 
 			</td>
 		</tr>
 		<tr>
