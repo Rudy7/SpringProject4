@@ -22,7 +22,7 @@ public class BoardMapperImpl implements BoardMapper{
 	public void insertBoard(BoardDTO board) {
 		logger.info("보더매퍼 임플입니다. 제목은 {}" , board.getTitle());
 		logger.info("보더매퍼 임플입니다. 내용은 {}" , board.getContent());
-		logger.info("보더매퍼 임플입니다. 아이디는 {}" , board.getUserid());
+		logger.info("보더매퍼 임플입니다. 아이디는 {}" , board.getUserid()); //aa
 		sqlSession.insert(ns+"insertBoard", board);
 	}
 
